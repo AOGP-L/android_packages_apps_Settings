@@ -84,6 +84,7 @@ public class SecuritySettings extends SettingsPreferenceFragment
     private static final String KEY_OWNER_INFO_SETTINGS = "owner_info_settings";
     private static final String KEY_ADVANCED_SECURITY = "advanced_security";
     private static final String KEY_MANAGE_TRUST_AGENTS = "manage_trust_agents";
+    private static final String KEY_ADVANCED_REBOOT = "advanced_reboot";
 
     private static final int SET_OR_CHANGE_LOCK_METHOD_REQUEST = 123;
     private static final int CONFIRM_EXISTING_FOR_BIOMETRIC_WEAK_IMPROVE_REQUEST = 124;
@@ -132,6 +133,7 @@ public class SecuritySettings extends SettingsPreferenceFragment
     private SwitchPreference mToggleAppInstallation;
     private DialogInterface mWarnInstallApps;
     private SwitchPreference mPowerButtonInstantlyLocks;
+    private ListPreference mAdvancedReboot;
 
     private ListPreference mSmsSecurityCheck;
 
@@ -399,6 +401,14 @@ public class SecuritySettings extends SettingsPreferenceFragment
             if (deviceAdminCategory != null) {
                 deviceAdminCategory.removePreference(appOpsSummary);
             }
+        mAdvancedReboot = (ListPreference) root.findPreference(KEY_ADVANCED_REBOOT);
+        if (mIsPrimary) {
+            mAdvancedReboot.setValue(String.valueOf(Settings.Secure.getInt(
+                    getContentResolver(), Settings.Secure.ADVANCED_REBOOT, 0)));
+            mAdvancedReboot.setSummary(mAdvancedReboot.getEntry());
+            mAdvancedReboot.setOnPreferenceChangeListener(this);
+        } else {
+            deviceAdminCategory.removePreference(mAdvancedReboot);
         }
 
         // Advanced Security features
@@ -410,6 +420,7 @@ public class SecuritySettings extends SettingsPreferenceFragment
                 manageAgents.setEnabled(false);
                 manageAgents.setSummary(R.string.disabled_because_no_backup_security);
             }
+
         }
 
         // The above preferences come and go based on security state, so we need to update
@@ -726,6 +737,11 @@ public class SecuritySettings extends SettingsPreferenceFragment
             Settings.Secure.putInt(getContentResolver(), Settings.Global.SMS_OUTGOING_CHECK_MAX_COUNT,
                     smsSecurityCheck);
             updateSmsSecuritySummary(smsSecurityCheck);
+        } else if (preference == mAdvancedReboot) {
+            Settings.Secure.putInt(getContentResolver(), Settings.Secure.ADVANCED_REBOOT,
+                    Integer.valueOf((String) value));
+            mAdvancedReboot.setValue(String.valueOf(value));
+            mAdvancedReboot.setSummary(mAdvancedReboot.getEntry());
         }
         return result;
     }
