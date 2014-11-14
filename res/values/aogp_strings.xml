@@ -58,5 +58,16 @@
     <string name="share_aogp_summary">Let others know about AOGP</string>
     <string name="share_message">Check out what #AOGP is all about @ https://plus.google.com/communities/115559086943411204267</string>
     <string name="share_chooser_title">Share AOGP</string>
+    
+    <!-- Host File Manager -->
+    <string name="hfm_disable_ads_title">Disable Ads</string>
+    <string name="hfm_disable_ads_summary">Change hosts file to disable ads</string>
+    <string name="hfm_pref_screen_title">Ad blocker</string>
+    <string name="hfm_update_hosts">Update hosts file</string>
+    <string name="hfm_update_hosts_summary">Download and apply fresh hosts</string>
+    <string name="hfm_dialog_wait">Working, please wait...</string>
+    <string name="hfm_dialog_failed">Updating hosts file failed. Please try again.</string>
+    <string name="hfm_dialog_success">/4 hosts sources successfully applied!</string>
+    <string name="hfm_dialog_conn_error">Error: No network connectivity</string>
 
 </resources>
