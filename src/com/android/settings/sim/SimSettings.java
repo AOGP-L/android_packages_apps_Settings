@@ -165,19 +165,13 @@ public class SimSettings extends RestrictedSettingsFragment implements Indexable
         for (int i = 0; i < mNumSlots; ++i) {
             final SubInfoRecord sir = findRecordBySlotId(i);
             simCards.addPreference(new SimPreference(getActivity(), sir, i));
-            if (mNumSlots > 1) {
-                mSimEnablers.add(i, new MultiSimEnablerPreference(
-                        getActivity(), sir, mHandler, i));
-                simEnablers.addPreference(mSimEnablers.get(i));
-            } else {
-                removePreference(SIM_ENABLER_CATEGORY);
-            }
             // Do not display deactivated subInfo in preference list
             if ((sir != null) && (sir.mStatus == SubscriptionManager.ACTIVE)) {
                 mNumSims++;
                 mAvailableSubInfos.add(sir);
             }
         }
+        removePreference(SIM_ENABLER_CATEGORY);
     }
 
     private void updateAllOptions() {
