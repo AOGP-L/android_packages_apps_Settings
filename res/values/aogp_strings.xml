@@ -521,4 +521,13 @@
     <string name="screen_recorder_record_audio_summary">Record audio from the microphone</string>
     <string name="screen_recorder_power_menu_summary">Add a Screen Record entry in the power menu</string>
 
+    <!-- Statusbar Clock Style -->
+    <string name="clock_font_style_title">Font</string>
+    <string name="clock_font_bold">Bold</string>
+    <string name="clock_font_light">Light</string>
+    <string name="clock_font_normal">Normal</string>
+    <string name="clock_font_condensed">Condensed</string>
+    <string name="clock_font_light_italic">Light Italic</string>
+    <string name="clock_font_resurrection">Resurrection Font</string>
+
 </resources>
