@@ -116,4 +116,10 @@
     <string name="show_unac_and_overcounted_stats_title">Show unaccounted/overcounted stats</string>
     <string name="show_unac_and_overcounted_stats_summary">Show in battery statistics unaccounted and over-counted usage.</string>
      
+     <!-- MediaScanner behavior on boot -->
+     <string name="options_settings_title">Options</string>
+     <string name="media_scanner_on_boot_title">MediaScanner behavior on boot</string>
+     <string name="media_scanner_on_boot_enabled">Scan media</string>
+     <string name="media_scanner_on_boot_ask">Ask to scan (notification)</string>
+     <string name="media_scanner_on_boot_disabled">Do not scan media</string>
 </resources>
