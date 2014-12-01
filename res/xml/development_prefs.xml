@@ -27,10 +27,17 @@
                 android:targetClass="com.android.development.Development" />
     </PreferenceScreen>
 
-    <com.android.settings.BugreportPreference
-            android:key="bugreport"
-            android:title="@*android:string/bugreport_title"
-            android:dialogTitle="@*android:string/bugreport_title" />
+    <PreferenceScreen
+        android:key="hfm_settings"
+        android:title="@string/hfm_pref_screen_title"
+        android:fragment="com.android.settings.bliss.hfm.HfmSettings" />
+	
+    <ListPreference
+        android:key="media_scanner_on_boot"
+        android:title="@string/media_scanner_on_boot_title"
+        android:persistent="false"
+        android:entries="@array/media_scanner_on_boot_entries"
+        android:entryValues="@array/media_scanner_on_boot_values" />	            
 
     <SwitchPreference
         android:key="advanced_reboot"
@@ -126,11 +133,6 @@
             android:key="enable_terminal"
             android:title="@string/enable_terminal_title"
             android:summary="@string/enable_terminal_summary" />
-
-        <SwitchPreference
-            android:key="bugreport_in_power"
-            android:title="@string/bugreport_in_power"
-            android:summary="@string/bugreport_in_power_summary"/>
 
         <SwitchPreference
             android:key="allow_mock_location"
