@@ -52,6 +52,12 @@
     <PreferenceScreen android:key="changelog"
          android:title="@string/changelog_title"
          android:icon="@drawable/ic_changelog"
-         android:fragment="com.android.settings.aogp.ChangeLog" />     
+         android:fragment="com.android.settings.aogp.ChangeLog" />  
+
+    <!-- Clock Style -->
+        <PreferenceScreen
+            android:key="clock_style_pref"
+            android:fragment="com.android.settings.aogp.StatusBarClockStyle"
+            android:title="@string/status_bar_clock" />   
 
 </PreferenceScreen>
