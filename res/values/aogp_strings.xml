@@ -27,6 +27,8 @@
     <string name="system_options"><i><b>System Options</b></i></string>
     <string name="aogp_tools"><i><b>Tools</b></i></string>
     <string name="reset_message">Reset all entries to default?</string>
+    <string name="add">Add</string>
+    <string name="help">Help</string>
 
     <!-- About phone screen, build date -->
     <string name="build_date">Build date</string>
