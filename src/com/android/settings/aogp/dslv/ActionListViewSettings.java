@@ -64,7 +64,7 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.R;
 import com.android.settings.aogp.dslv.DragSortListView;
 import com.android.settings.aogp.dslv.DragSortController;
-import com.android.settings.cyanogenmod.ShortcutPickHelper;
+import com.android.settings.aogp.util.ShortcutPickerHelper;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -517,8 +517,10 @@ public class ActionListViewSettings extends ListFragment implements
     }
 
     private ArrayList<ActionConfig> getConfig() {
-/* Disabled for now till all features are back. Enable it step per step!!!!!!
         switch (mActionMode) {
+			case LOCKSCREEN_SHORTCUT:
+                return ActionHelper.getLockscreenShortcutConfig(mActivity);
+/* Disabled for now till all features are back. Enable it step per step!!!!!!
             case NAV_BAR:
                 return ActionHelper.getNavBarConfigWithDescription(
                     mActivity, mActionValuesKey, mActionEntriesKey);
@@ -538,14 +540,17 @@ public class ActionListViewSettings extends ListFragment implements
                 return ActionHelper.getLockscreenShortcutConfig(mActivity);
             case SHAKE_EVENTS_DISABLED:
                 return ActionHelper.getDisabledShakeApps(mActivity);
-        }
 */
+	    }
         return null;
     }
 
     private void setConfig(ArrayList<ActionConfig> actionConfigs, boolean reset) {
-/* Disabled for now till all features are back. Enable it step per step!!!!!!
         switch (mActionMode) {
+			case LOCKSCREEN_SHORTCUT:
+                 ActionHelper.setLockscreenShortcutConfig(mActivity, actionConfigs, reset);
+                 break;
+/* Disabled for now till all features are back. Enable it step per step!!!!!!
             case NAV_BAR:
                 ActionHelper.setNavBarConfig(mActivity, actionConfigs, reset);
                 break;
@@ -567,8 +572,8 @@ public class ActionListViewSettings extends ListFragment implements
             case SHAKE_EVENTS_DISABLED:
                 ActionHelper.setDisabledShakeApps(mActivity, actionConfigs, reset);
                 break;
-        }
 */
+       }
     }
 
     private class ViewHolder {
