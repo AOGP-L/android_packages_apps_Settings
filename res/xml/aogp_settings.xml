@@ -33,6 +33,11 @@
          android:entryValues="@array/toast_animation_values"
          android:persistent="false" />
          
+    <PreferenceScreen
+         android:id="@+id/listview"
+         android:fragment="com.android.settings.aogp.Listview"
+         android:title="@string/listview_category" />
+         
     <!-- Miscellaneous -->
     <PreferenceScreen
          android:id="@+id/misc_settings"
