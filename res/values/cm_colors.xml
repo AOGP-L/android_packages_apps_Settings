@@ -17,6 +17,11 @@ limitations under the License.
 <resources>
     <color name="floating_action_button_touch_tint">#80ffffff</color>
 
+<<<<<<< HEAD
     <color name="screencolor_background">#50000000</color>
     <drawable name="transparent_background">#00000000</drawable>
+=======
+    <!-- Gesture Anywhere -->
+    <color name="ga_gesture_color">@android:color/holo_blue_light</color>
+>>>>>>> 59ed9d5... Settings: Gesture Anywhere - bring it back [2/2]
 </resources>

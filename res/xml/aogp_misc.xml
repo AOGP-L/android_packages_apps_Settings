@@ -19,6 +19,10 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/misc_title" >
     
+    <PreferenceCategory
+         android:key="tools"
+         android:title="aogp_tools">
+    
     <PreferenceScreen
          android:key="hfm_settings"
          android:title="@string/hfm_pref_screen_title"
@@ -34,19 +38,39 @@
           android:id="@+id/flashon"
           android:title="@string/flashon"
           android:fragment="com.android.settings.aogp.FileFragment" />
-         
-    <CheckBoxPreference
-         android:key="disable_immersive_message"
-         android:title="@string/disable_immersive_message_title"
-         android:summary="@string/disable_immersive_message_summary"
-         android:persistent="false" />     
-
+          
     <!-- Circle app bar -->
     <PreferenceScreen
         android:key="app_circle_bar"
         android:fragment="com.android.settings.aogp.AppCircleBar"
         android:title="@string/app_circle_bar_title"
         android:icon="@drawable/ic_settings_sidebar"/>
+        
+    </PreferenceCategory>          
+                 
+    <PreferenceCategory
+        android:key="gestures"
+        android:title="@string/gestures_category"> 
+              
+    <!-- Gesture anywhere -->
+    <PreferenceScreen
+        android:key="gesture_anywhere"
+        android:fragment="com.android.settings.aogp.gestureanywhere.GestureAnywhereSettings"
+        android:title="@string/gesture_anywhere_title"
+        android:icon="@drawable/ic_settings_gesture_anywhere" />     
+    </PreferenceCategory>
+    
+    <PreferenceCategory
+        android:key="system_options"
+        android:title="@string/system_options">   
+        
+    <CheckBoxPreference
+        android:key="disable_immersive_message"
+        android:title="@string/disable_immersive_message_title"
+        android:summary="@string/disable_immersive_message_summary"
+        android:persistent="false" /> 
+        
+    </PreferenceCategory>    
 
 			 		        
 </PreferenceScreen>
