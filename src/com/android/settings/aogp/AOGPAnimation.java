@@ -16,17 +16,29 @@
 
 package com.android.settings.aogp;
 
+
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.ActivityNotFoundException;
+import android.content.ContentResolver;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.res.Configuration;
+import android.graphics.Bitmap;
+import android.graphics.Rect;
+import android.net.Uri;
+import android.os.Bundle;
+import android.preference.CheckBoxPreference;
+import android.preference.ListPreference;
+import android.preference.Preference;
+import android.preference.PreferenceScreen;
+import android.provider.Settings;
+import android.view.Display;
+import android.view.Window;
 import android.widget.Toast;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.R;
-import android.provider.Settings;
-import android.content.ContentResolver;
-import android.content.Context;
-import android.content.Intent;
-import android.os.Bundle;
-import android.preference.Preference;
-import android.preference.ListPreference;
-import android.preference.PreferenceScreen;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,8 +48,15 @@ public class AOGPAnimation extends SettingsPreferenceFragment implements
 	private static final String TAG = "AOGPAnimation";
 	
 	private static final String KEY_TOAST_ANIMATION = "toast_animation";
+	private static final String SCROLLINGCACHE_PREF = "pref_scrollingcache";
+    private static final String SCROLLINGCACHE_PERSIST_PROP = "persist.sys.scrollingcache";
+    private static final String SCROLLINGCACHE_DEFAULT = "1";
 	
 	private ListPreference mToastAnimation;
+	private ListPreference mScrollingCachePref;
+	
+	private final Configuration mCurConfig = new Configuration();
+    private Context mContext;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -46,6 +65,7 @@ public class AOGPAnimation extends SettingsPreferenceFragment implements
         addPreferencesFromResource(R.xml.aogp_animation);
 
      PreferenceScreen prefSet = getPreferenceScreen();
+     ContentResolver resolver = getContentResolver();
 
      mToastAnimation = (ListPreference) prefSet.findPreference(KEY_TOAST_ANIMATION);
      mToastAnimation.setSummary(mToastAnimation.getEntry());
@@ -53,6 +73,12 @@ public class AOGPAnimation extends SettingsPreferenceFragment implements
      getContentResolver(),Settings.System.TOAST_ANIMATION, 1);
      mToastAnimation.setValueIndex(CurrentToastAnimation);
      mToastAnimation.setOnPreferenceChangeListener(this);
+     
+     // Scrolling Cache
+     mScrollingCachePref = (ListPreference) findPreference(SCROLLINGCACHE_PREF);
+     mScrollingCachePref.setValue(SystemProperties.get(SCROLLINGCACHE_PERSIST_PROP,
+     SystemProperties.get(SCROLLINGCACHE_PERSIST_PROP, SCROLLINGCACHE_DEFAULT)));
+     mScrollingCachePref.setOnPreferenceChangeListener(this); 
      
      }
            
@@ -73,7 +99,12 @@ public class AOGPAnimation extends SettingsPreferenceFragment implements
               Toast.makeText(getActivity(), "Toast animation test!!!",
               Toast.LENGTH_SHORT).show();
               return true;
-		  }
+          } else if (preference == mScrollingCachePref) {
+              if (newValue != null) {
+                  SystemProperties.set(SCROLLINGCACHE_PERSIST_PROP, (String) newValue);
+              }
+              return true; 
+      }
 		  return false;
 	  }
 }
