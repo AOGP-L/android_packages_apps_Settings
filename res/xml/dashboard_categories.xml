@@ -89,7 +89,7 @@
                 android:id="@+id/aogp_settings"
                 android:title="@string/aogp_settings"
                 android:fragment="com.android.settings.aogp.AOGPSettings"
-                android:icon="@drawable/ic_settings_development"
+                android:icon="@drawable/ic_aogp"
                 />                
 
         <!-- Status bar -->
