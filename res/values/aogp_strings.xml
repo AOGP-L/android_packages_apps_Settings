@@ -19,6 +19,7 @@
     <!-- About phone screen, AOGP version -->
     <string name="mod_version">AOGP version</string>
     <string name="mod_version_default">Unknown</string>
+    <string name="aogp_settings">AOGP Custom</string>
 
     <!-- About phone screen, build date -->
     <string name="build_date">Build date</string>
