@@ -22,6 +22,7 @@
     <PreferenceScreen
          android:key="hfm_settings"
          android:title="@string/hfm_pref_screen_title"
+         android:icon="@drawable/ic_adblocker"
          android:fragment="com.android.settings.aogp.hfm.HfmSettings" />
     
     <PreferenceScreen
