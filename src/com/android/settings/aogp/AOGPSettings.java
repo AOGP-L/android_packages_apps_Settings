@@ -32,7 +32,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AOGPSettings extends SettingsPreferenceFragment implements 
-         Preference.OnPreferenceChangeListener, OnPreferenceClickListener {
+         Preference.OnPreferenceChangeListener {
 	private static final String TAG = "AOGPSettings";
 	
 	private static final String KEY_TOAST_ANIMATION = "toast_animation";
