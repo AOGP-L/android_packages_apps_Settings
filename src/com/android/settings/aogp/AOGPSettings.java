@@ -16,26 +16,23 @@
 
 package com.android.settings.aogp;
 
-import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.content.pm.ResolveInfo;
-import android.content.ContentResolver;
-import android.os.Bundle;
-import android.preference.ListPreference;
-import android.os.SystemProperties;
-import android.provider.Settings;
-import android.preference.Preference;
-import android.preference.PreferenceScreen;
 import android.widget.Toast;
-
-
-import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
+import com.android.settings.R;
+import android.provider.Settings;
+import android.content.ContentResolver;
+import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
+import android.preference.Preference;
+import android.preference.ListPreference;
+import android.preference.PreferenceScreen;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class AOGPSettings extends SettingsPreferenceFragment implements Preference.OnPreferenceChangeListener, OnPreferenceClickListener {
+public class AOGPSettings extends SettingsPreferenceFragment implements 
+         Preference.OnPreferenceChangeListener, OnPreferenceClickListener {
 	private static final String TAG = "AOGPSettings";
 	
 	private static final String KEY_TOAST_ANIMATION = "toast_animation";
