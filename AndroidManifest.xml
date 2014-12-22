@@ -2197,7 +2197,7 @@
         </activity>
         
         <!-- AOGP Settings -->
-        <activity android:name="Settings$AOGPSettingsActivity"
+        <activity android:name="Settings$MainSettingsActivity"
             android:label="@string/aogp_settings"
             android:taskAffinity="">
             <intent-filter>
