@@ -35,7 +35,7 @@ import com.android.settings.SettingsPreferenceFragment;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Misc extends SettingsPreferenceFragment implements Preference.OnPreferenceChangeListener, OnPreferenceClickListener{
+public class AOGPSettings extends SettingsPreferenceFragment implements Preference.OnPreferenceChangeListener, OnPreferenceClickListener {
 	private static final String TAG = "AOGPSettings";
 	
 	private static final String KEY_TOAST_ANIMATION = "toast_animation";
