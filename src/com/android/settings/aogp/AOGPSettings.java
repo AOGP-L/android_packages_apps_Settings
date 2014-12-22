@@ -56,6 +56,8 @@ public class AOGPSettings extends SettingsPreferenceFragment implements Preferen
      getContentResolver(),Settings.System.TOAST_ANIMATION, 1);
      mToastAnimation.setValueIndex(CurrentToastAnimation);
      mToastAnimation.setOnPreferenceChangeListener(this);
+     
+     }
            
       @Override
       public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
