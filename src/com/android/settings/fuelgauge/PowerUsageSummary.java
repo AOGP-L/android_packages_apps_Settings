@@ -307,7 +307,7 @@ public class PowerUsageSummary extends PreferenceFragment {
                     if (percentOfTotal < 5) {
                         continue;
                     }
-                    if (!showUnacAndOvercounted)) {
+                    if (!showUnacAndOvercounted) {
                         continue;
                     }
                 }
