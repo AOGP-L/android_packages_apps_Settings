@@ -21,6 +21,8 @@ import android.app.Dialog;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.os.Bundle;
@@ -43,14 +45,17 @@ import java.util.ArrayList;
 
 public class AOGPMisc extends SettingsPreferenceFragment {
 	private static final String TAG = "AOGP Misc";		 
-			 
+	
+	/** If there is no setting in the provider, use this. */		 
     private static final String DISABLE_IMMERSIVE_MESSAGE = "disable_immersive_message";
     
+    private final Configuration mCurConfig = new Configuration();
     private CheckBoxPreference mDisableIM;
     
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+         final ContentResolver resolver = activity.getContentResolver();
 
         addPreferencesFromResource(R.xml.aogp_misc);
         

@@ -203,7 +203,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
     private boolean mHaveDebugSettings;
     private boolean mDontPokeProperties;
 
-    private SwitchPreference mShowUnacAndOvercounted;
+    private CheckBoxPreference mShowUnacAndOvercounted;
     private CheckBoxPreference mEnableAdb;
     private CheckBoxPreference mAdbNotify;
     private CheckBoxPreference mAdbOverNetwork;
