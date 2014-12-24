@@ -41,7 +41,7 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class AOGPMisc extends SettingsPreferenceFragment implements
-         Preference.OnPreferenceChangeListener {
+         Preference.OnPreferenceChangeListener, OnPreferenceClickListener {
 	private static final String TAG = "AOGP Misc";		 
 			 
     private static final String DISABLE_IMMERSIVE_MESSAGE = "disable_immersive_message";
