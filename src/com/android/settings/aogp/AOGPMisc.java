@@ -24,9 +24,9 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.os.Bundle;
-import android.os.SystemProperties;
 import android.preference.CheckBoxPreference;
 import android.preference.Preference;
+import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.Preference.OnPreferenceClickListener;
 import android.preference.ListPreference;
 import android.preference.SwitchPreference;
@@ -42,15 +42,12 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class AOGPMisc extends SettingsPreferenceFragment implements
-         Preference.OnPreferenceChangeListener, OnPreferenceClickListener {
-	private static final String TAG = "AOGP Misc";
-	
-	private final Configuration mCurConfig = new Configuration();		 
+         Preference.OnPreferenceClickListener {
+	private static final String TAG = "AOGP Misc";		 
 			 
     private static final String DISABLE_IMMERSIVE_MESSAGE = "disable_immersive_message";
     
     private CheckBoxPreference mDisableIM;
-    
     
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -58,13 +55,13 @@ public class AOGPMisc extends SettingsPreferenceFragment implements
 
         addPreferencesFromResource(R.xml.aogp_misc);
         
-    PreferenceScreen prefSet = getPreferenceScreen();
-    }    
+    PreferenceScreen prefSet = getPreferenceScreen();    
     
     mDisableIM = (CheckBoxPreference) findPreference(DISABLE_IMMERSIVE_MESSAGE);
     mDisableIM.setChecked((Settings.System.getInt(resolver,
             Settings.System.DISABLE_IMMERSIVE_MESSAGE, 0) == 1));
-    }       
+            
+    }
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
         if  (preference == mDisableIM) {
