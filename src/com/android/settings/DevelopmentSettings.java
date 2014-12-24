@@ -308,7 +308,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
 
         addPreferencesFromResource(R.xml.development_prefs);
         
-        mShowUnacAndOvercounted = findAndInitSwitchPref(SHOW_UNAC_AND_OVERCOUNTED_STATS);
+        mShowUnacAndOvercounted = findAndInitCheckboxPref(SHOW_UNAC_AND_OVERCOUNTED_STATS);
 
         final PreferenceGroup debugDebuggingCategory = (PreferenceGroup)
                 findPreference(DEBUG_DEBUGGING_CATEGORY_KEY);
