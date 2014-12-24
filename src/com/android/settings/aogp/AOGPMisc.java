@@ -17,6 +17,7 @@
 package com.android.settings.aogp;
 
 import android.app.Activity;
+import android.app.ActivityManagerNative;
 import android.app.Dialog;
 import android.content.ContentResolver;
 import android.content.Context;
@@ -55,6 +56,7 @@ public class AOGPMisc extends SettingsPreferenceFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+         final Activity activity = getActivity();
          final ContentResolver resolver = activity.getContentResolver();
 
         addPreferencesFromResource(R.xml.aogp_misc);
