@@ -21,9 +21,9 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.graphics.drawable.Drawable;
 import android.os.BatteryStats;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -32,6 +32,7 @@ import android.os.UserManager;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceGroup;
+import android.preference.PreferenceManager;
 import android.preference.PreferenceScreen;
 import android.text.TextUtils;
 import android.view.Menu;
@@ -41,6 +42,7 @@ import android.view.MenuItem;
 import com.android.internal.os.BatterySipper;
 import com.android.internal.os.BatteryStatsHelper;
 import com.android.internal.os.PowerProfile;
+import com.android.settings.DevelopmentSettings;
 import com.android.settings.HelpUtils;
 import com.android.settings.R;
 import com.android.settings.SettingsActivity;
@@ -256,6 +258,10 @@ public class PowerUsageSummary extends PreferenceFragment {
         mHistPref.setOrder(-1);
         mAppListGroup.addPreference(mHistPref);
         boolean addedSome = false;
+        
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(getActivity());
+        final boolean showUnacAndOvercounted = sp.getBoolean(
+                 DevelopmentSettings.SHOW_UNAC_AND_OVERCOUNTED_STATS, false);
 
         final PowerProfile powerProfile = mStatsHelper.getPowerProfile();
         final BatteryStats stats = mStatsHelper.getStats();
@@ -288,7 +294,7 @@ public class PowerUsageSummary extends PreferenceFragment {
                     if (percentOfTotal < 10) {
                         continue;
                     }
-                    if ("user".equals(Build.TYPE)) {
+                    if (!showUnacAndOvercounted) {
                         continue;
                     }
                 }
@@ -301,7 +307,7 @@ public class PowerUsageSummary extends PreferenceFragment {
                     if (percentOfTotal < 5) {
                         continue;
                     }
-                    if ("user".equals(Build.TYPE)) {
+                    if (!showUnacAndOvercounted)) {
                         continue;
                     }
                 }
