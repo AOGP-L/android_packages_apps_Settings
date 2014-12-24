@@ -41,8 +41,7 @@ import com.android.settings.SettingsPreferenceFragment;
 import java.util.List;
 import java.util.ArrayList;
 
-public class AOGPMisc extends SettingsPreferenceFragment implements
-         Preference.OnPreferenceClickListener {
+public class AOGPMisc extends SettingsPreferenceFragment {
 	private static final String TAG = "AOGP Misc";		 
 			 
     private static final String DISABLE_IMMERSIVE_MESSAGE = "disable_immersive_message";
