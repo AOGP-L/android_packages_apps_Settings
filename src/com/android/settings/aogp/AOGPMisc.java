@@ -26,13 +26,14 @@ import android.content.pm.ResolveInfo;
 import android.os.Bundle;
 import android.preference.CheckBoxPreference;
 import android.preference.Preference;
+import android.preference.Preference.OnPreferenceChangeListener;
+import android.preference.Preference.OnPreferenceClickListener;
 import android.preference.ListPreference;
 import android.preference.SwitchPreference;
 import android.preference.PreferenceScreen;
 import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.Log;
-
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
