@@ -23,7 +23,8 @@
     <PreferenceScreen
            android:id="@+id/animation"
            android:title="@string/aogp_animation"
-           android:fragment="com.android.settings.aogp.AOGPAnimation" />
+           android:fragment="com.android.settings.aogp.AOGPAnimation"
+           android:icon="@drawable/ic_listview" />
     
     <!-- Status Bar-->
     <PreferenceScreen
