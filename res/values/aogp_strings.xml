@@ -21,6 +21,7 @@
     <string name="mod_version_default">Unknown</string>
     <string name="aogp_settings">AOGP Custom</string>
     <string name="misc_title">Miscellaneous</string>
+    <string name="aogp_animation">System Animation</string>
 
     <!-- About phone screen, build date -->
     <string name="build_date">Build date</string>
