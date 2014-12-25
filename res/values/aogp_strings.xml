@@ -27,6 +27,10 @@
     <string name="build_date">Build date</string>
     <string name="build_date_default">2014-01-01-0000</string>
 
+    <!-- About phone screen, AOGP build status -->
+    <string name="build_status">Build status</string>
+    <string name="build_status_default">Unknown</string>
+
     <!-- Toast animations -->
     <string name="toast_animation_title">Toast animations</string>
     <string name="toast_animation_summary">Select and preview system toast animation</string>
