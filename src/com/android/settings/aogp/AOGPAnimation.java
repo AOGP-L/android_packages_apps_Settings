@@ -44,18 +44,18 @@ import com.android.settings.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AOGPAnimation extends SettingsPreferenceFragment implements 
+public class AOGPAnimation extends SettingsPreferenceFragment implements
          Preference.OnPreferenceChangeListener {
 	private static final String TAG = "AOGPAnimation";
-	
+
 	private static final String KEY_TOAST_ANIMATION = "toast_animation";
 	private static final String SCROLLINGCACHE_PREF = "pref_scrollingcache";
     private static final String SCROLLINGCACHE_PERSIST_PROP = "persist.sys.scrollingcache";
     private static final String SCROLLINGCACHE_DEFAULT = "1";
-	
+
 	private ListPreference mToastAnimation;
 	private ListPreference mScrollingCachePref;
-	
+
 	private final Configuration mCurConfig = new Configuration();
     private Context mContext;
 
@@ -74,21 +74,21 @@ public class AOGPAnimation extends SettingsPreferenceFragment implements
      getContentResolver(),Settings.System.TOAST_ANIMATION, 1);
      mToastAnimation.setValueIndex(CurrentToastAnimation);
      mToastAnimation.setOnPreferenceChangeListener(this);
-     
+
      // Scrolling Cache
      mScrollingCachePref = (ListPreference) findPreference(SCROLLINGCACHE_PREF);
      mScrollingCachePref.setValue(SystemProperties.get(SCROLLINGCACHE_PERSIST_PROP,
      SystemProperties.get(SCROLLINGCACHE_PERSIST_PROP, SCROLLINGCACHE_DEFAULT)));
-     mScrollingCachePref.setOnPreferenceChangeListener(this); 
-     
+     mScrollingCachePref.setOnPreferenceChangeListener(this);
+
      }
-           
+
       @Override
       public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
            // If we didn't handle it, let preferences handle it.
            return super.onPreferenceTreeClick(preferenceScreen, preference);
       }
-      
+
       @Override
       public boolean onPreferenceChange(Preference preference, Object objValue) {
           final String key = preference.getKey();
@@ -101,11 +101,11 @@ public class AOGPAnimation extends SettingsPreferenceFragment implements
               Toast.LENGTH_SHORT).show();
               return true;
           } else if (preference == mScrollingCachePref) {
-              if (newValue != null) {
-                  SystemProperties.set(SCROLLINGCACHE_PERSIST_PROP, (String) newValue);
+              if (objValue != null) {
+                  SystemProperties.set(SCROLLINGCACHE_PERSIST_PROP, (String) objValue);
               }
-              return true; 
-      }
+              return true;
+            }
 		  return false;
 	  }
 }
