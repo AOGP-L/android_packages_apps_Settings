@@ -28,21 +28,24 @@ import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.graphics.Rect;
 import android.net.Uri;
-import android.os.SystemProperties;
 import android.os.Bundle;
 import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceScreen;
+import android.preference.SeekBarPreference;
+import android.os.SystemProperties;
+import android.provider.MediaStore;
 import android.provider.Settings;
 import android.view.Display;
 import android.view.Window;
 import android.widget.Toast;
+
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.R;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.io.File;
+import java.io.IOException;
 
 public class AOGPAnimation extends SettingsPreferenceFragment implements 
          Preference.OnPreferenceChangeListener {
@@ -50,14 +53,14 @@ public class AOGPAnimation extends SettingsPreferenceFragment implements
 	
 	private static final String KEY_TOAST_ANIMATION = "toast_animation";
 	private static final String SCROLLINGCACHE_PREF = "pref_scrollingcache";
-    private static final String SCROLLINGCACHE_PERSIST_PROP = "persist.sys.scrollingcache";
-    private static final String SCROLLINGCACHE_DEFAULT = "1";
+        private static final String SCROLLINGCACHE_PERSIST_PROP = "persist.sys.scrollingcache";
+        private static final String SCROLLINGCACHE_DEFAULT = "1";
 	
 	private ListPreference mToastAnimation;
 	private ListPreference mScrollingCachePref;
 	
 	private final Configuration mCurConfig = new Configuration();
-    private Context mContext;
+        private Context mContext;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -101,8 +104,8 @@ public class AOGPAnimation extends SettingsPreferenceFragment implements
               Toast.LENGTH_SHORT).show();
               return true;
           } else if (preference == mScrollingCachePref) {
-              if (newValue != null) {
-                  SystemProperties.set(SCROLLINGCACHE_PERSIST_PROP, (String) newValue);
+              if (objValue != null) {
+                  SystemProperties.set(SCROLLINGCACHE_PERSIST_PROP, (String) objValue);
               }
               return true; 
       }
