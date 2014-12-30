@@ -25,6 +25,11 @@
          android:icon="@drawable/ic_adblocker"
          android:fragment="com.android.settings.aogp.hfm.HfmSettings" />
          
+    <PreferenceScreen
+          android:id="@+id/wakelock_blocker"
+          android:title="@string/wakelock_blocker"
+          android:fragment="com.android.settings.aogp.WakeLockBlocker" />
+         
     <CheckBoxPreference
          android:key="disable_immersive_message"
          android:title="@string/disable_immersive_message_title"
