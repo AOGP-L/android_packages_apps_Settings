@@ -166,4 +166,10 @@
     <string name="wakelock_blocker_reload">Reload</string>
     <string name="wakelock_blocker_warning_title">Proceed with caution</string>
     <string name="wakelock_blocker_warning">Blocking wakelocks have the potential to cause instability, crashes or data loss.</string>  
+
+    <!--FlashON-->
+    <string name="empty">This folder is Empty!</string>
+    <string name="flashon">Flash ON</string>
+    
 </resources>
+

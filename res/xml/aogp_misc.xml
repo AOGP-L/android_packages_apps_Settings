@@ -29,6 +29,11 @@
           android:id="@+id/wakelock_blocker"
           android:title="@string/wakelock_blocker"
           android:fragment="com.android.settings.aogp.WakeLockBlocker" />
+          
+    <PreferenceScreen
+          android:id="@+id/flashon"
+          android:title="@string/flashon"
+          android:fragment="com.android.settings.aogp.FileFragment" />
          
     <CheckBoxPreference
          android:key="disable_immersive_message"
