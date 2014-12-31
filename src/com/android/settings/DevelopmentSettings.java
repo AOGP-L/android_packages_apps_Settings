@@ -1364,7 +1364,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
     }
 
     private void updateCpuInfoOptions() {
-        updateSwitchPref(mShowCpuInfo, Settings.Global.getInt(getActivity().getContentResolver(),
+        updateSwitch(mShowCpuInfo, Settings.Global.getInt(getActivity().getContentResolver(),
                 Settings.Global.SHOW_CPU, 0) != 0);
     }
 
