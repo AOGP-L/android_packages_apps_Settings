@@ -23,3 +23,4 @@ public interface Constants {
 	//FlashON
     public static final String FLASH_KERNEL = "pref_kernel_img";
     public static final String FLASH_RECOVERY = "pref_recovery_img";
+}
