@@ -4,6 +4,7 @@ import java.io.File;
 import java.util.Date;
 
 import com.android.settings.SettingsPreferenceFragment;
+import com.android.settings.R;
 
 import android.content.Context;
 import android.graphics.Color;

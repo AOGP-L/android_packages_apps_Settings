@@ -102,7 +102,6 @@ public class FileFragment extends Fragment implements OnItemClickListener{
 			});
 			AlertDialog dialog = builder.create();
 			dialog.show();
-			window.setLayout(600, LayoutParams.WRAP_CONTENT);
 			
 		}else if(filesList[position].getName().endsWith(".img")) {
 			AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
@@ -124,7 +123,6 @@ public class FileFragment extends Fragment implements OnItemClickListener{
 			});
 			AlertDialog dialog = builder.create();
 			dialog.show();
-			window.setLayout(600, LayoutParams.WRAP_CONTENT);
 		}
 	}
 	
