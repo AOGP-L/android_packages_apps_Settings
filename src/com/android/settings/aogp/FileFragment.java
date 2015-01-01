@@ -87,7 +87,7 @@ public class FileFragment extends Fragment implements OnItemClickListener{
 			fragment.setArguments(bundle);
 			FragmentTransaction ft = getFragmentManager().beginTransaction();
 		    // This adds the newly created Preference fragment to my main layout, shown below
-            ft.replace(R.id.activity_container,fragment);
+            (R.id.activity_container,fragment);
 			ft.commit();
 		}else if(filesList[position].getName().endsWith(".apk")) {
 			Intent intent = new Intent(Intent.ACTION_VIEW);
