@@ -178,16 +178,17 @@
     <string name="show_cpu_info_summary">Screen overlay showing current CPU info</string>
     
     <!-- Download Center -->
+    <string name="interface_settings">AOGP Interface</string>
     <string name="download_category">AOGP Downloads</string>
     <string name="download_category_summary">Find all of your support needs inside</string>
     <string name="rom_category">Rom Download</string>
     <string name="gapps_category">GAPPS Packages</string>
-    <string name="bliss_official_title">AOGP Official Builds</string>
-    <string name="bliss_official_summary">Link for Official release builds of AOGP</string>
-    <string name="bliss_nightly_title">AOGP Nightly Builds</string>
-    <string name="bliss_nightly_summary">Link for Nightly release builds of AOGP</string>
+    <string name="aogp_official_title">AOGP Official Builds</string>
+    <string name="aogp_official_summary">Link for Official release builds of AOGP</string>
+    <string name="aogp_nightly_title">AOGP Nightly Builds</string>
+    <string name="aogp_nightly_summary">Link for Nightly release builds of AOGP</string>
     <string name="banksgapps_title">Banks Gapps</string>
-    <string name="banksgapps_summary">Banks Gapps are generally recommended gapps for use on BlissPop</string>    
+    <string name="banksgapps_summary">Banks Gapps are generally recommended gapps for use on AOGP</string>    
     <string name="pagapps_title">PA Gapps</string>
     <string name="pagapps_summary">Fully packed with the majority of GAPPS, these are commonly used by users that do not want to download/install them later</string>
 
