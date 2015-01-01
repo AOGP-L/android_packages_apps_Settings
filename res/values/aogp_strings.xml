@@ -178,7 +178,7 @@
     <string name="show_cpu_info_summary">Screen overlay showing current CPU info</string>
     
     <!-- Download Center -->
-    <string name="interface_settings">AOGP Interface</string>
+    <string name="interface_settings_title">AOGP Interface</string>
     <string name="download_category">AOGP Downloads</string>
     <string name="download_category_summary">Find all of your support needs inside</string>
     <string name="rom_category">Rom Download</string>
