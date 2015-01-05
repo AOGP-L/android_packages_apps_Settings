@@ -39,5 +39,18 @@
          android:title="@string/misc_title"
          android:fragment="com.android.settings.aogp.AOGPMisc"
          android:icon="@drawable/ic_settings_more" />
+         
+    <!-- AOGP Downloads  -->
+    <PreferenceScreen    
+        android:key="download_center"
+        android:fragment="com.android.settings.aogp.Download"
+        android:title="@string/download_category"
+        android:summary="@string/download_category_summary" 
+	    android:icon="@drawable/ic_tab_unselected_download" />     
+         
+    <!-- Change Log -->
+    <PreferenceScreen android:key="changelog"
+         android:title="@string/changelog_title"
+         android:fragment="com.android.settings.aogp.ChangeLog" />     
 
 </PreferenceScreen>

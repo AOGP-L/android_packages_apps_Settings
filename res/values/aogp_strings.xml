@@ -20,9 +20,9 @@
     <string name="mod_version">AOGP version</string>
     <string name="mod_version_default">Unknown</string>
     <string name="model_name">Model name</string>
-    <string name="aogp_settings">AOGP Custom</string>
-    <string name="misc_title">Miscellaneous</string>
-    <string name="aogp_animation">System Animation</string>
+    <string name="aogp_settings"><i><b>AOGP Custom</b></i></string>
+    <string name="misc_title"><i><b>Miscellaneous</b></i></string>
+    <string name="aogp_animation"><i><b>System Animation</b></i></string>
 
     <!-- About phone screen, build date -->
     <string name="build_date">Build date</string>
@@ -33,7 +33,7 @@
     <string name="build_status_default">Unknown</string>
 
     <!-- Toast animations -->
-    <string name="toast_animation_title">Toast animations</string>
+    <string name="toast_animation_title"><i><b>Toast animations</b></i></string>
     <string name="toast_animation_summary">Select and preview system toast animation</string>
     <string name="toast_none_animation">None</string>
     <string name="toast_default_animation">Default</string>
@@ -59,7 +59,7 @@
     <!-- Host File Manager -->
     <string name="hfm_disable_ads_title">Disable Ads</string>
     <string name="hfm_disable_ads_summary">Change hosts file to disable ads</string>
-    <string name="hfm_pref_screen_title">Ad blocker</string>
+    <string name="hfm_pref_screen_title"><i><b>Ad blocker</b></i></string>
     <string name="hfm_update_hosts">Update hosts file</string>
     <string name="hfm_update_hosts_summary">Download and apply fresh hosts</string>
     <string name="hfm_dialog_wait">Working, please wait...</string>
@@ -75,7 +75,7 @@
     
     <!-- ListView animation -->
     <string name="listview_category">ListView Animation</string>
-    <string name="listview_animation_title">ListView Animation</string>
+    <string name="listview_animation_title"><i><b>ListView Animation</b></i></string>
     <string name="listview_off">Off</string>
     <string name="listview_wave_left">Wave (Left)</string>
     <string name="listview_wave_right">Wave (Right)</string>
@@ -89,7 +89,7 @@
     <string name="listview_translate_right">Translate (Right)</string>
 
     <!-- ListView interpolator -->
-    <string name="listview_interpolator_title">ListView Interpolator</string>
+    <string name="listview_interpolator_title"><i><b>ListView Interpolator</b></i></string>
     <string name="listview_accelerate_interpolator">accelerate_interpolator</string>
     <string name="listview_decelerate_interpolator">decelerate_interpolator</string>
     <string name="listview_accelerate_decelerate_interpolator">accelerate_decelerate_interpolator</string>
@@ -130,7 +130,7 @@
      <string name="media_scanner_on_boot_disabled">Do not scan media</string>
      
     <!-- Animation Controls -->
-    <string name="title_animation_controls">AOKP Animations</string>
+    <string name="title_animation_controls"><i><b>AOKP Animations</b></i></string>
     <string name="activity_open_title">Activity Open Animation</string>
     <string name="activity_close_title">Activity Close Animation</string>
     <string name="task_open_title">Task Open Animation</string>
@@ -158,7 +158,7 @@
     <string name="pref_scrollingcache_force_disable">Force disable</string>
     
     <!-- Wakelock blocker -->
-    <string name="wakelock_blocker">Wakelock blocker</string>
+    <string name="wakelock_blocker"><i><b>Wakelock blocker</b></i></string>
     <string name="wakelock_blocker_title">Enable</string>
     <string name="wakelock_blocker_summary">Block system wakelocks</string>
     <string name="wakelock_blocker_save">Save</string>
@@ -169,7 +169,7 @@
 
     <!--FlashON-->
     <string name="empty">This folder is Empty!</string>
-    <string name="flashon">Flash ON</string>
+    <string name="flashon"><i><b>Flash ON</b></i></string>
     <string name="qqq">qqq</string>
 
     <!-- UI debug setting: show CPU info? [CHAR LIMIT=25] -->
@@ -178,8 +178,7 @@
     <string name="show_cpu_info_summary">Screen overlay showing current CPU info</string>
     
     <!-- Download Center -->
-    <string name="interface_settings_title">AOGP Interface</string>
-    <string name="download_category">AOGP Downloads</string>
+    <string name="download_category"><i><b>AOGP Downloads</b></i></string>
     <string name="download_category_summary">Find all of your support needs inside</string>
     <string name="rom_category">Rom Download</string>
     <string name="gapps_category">GAPPS Packages</string>
@@ -210,7 +209,7 @@
 
     <!-- Circle app bar -->
     <string name="category_app_circle_bar_title">App launcher</string>
-    <string name="app_circle_bar_title">App circle bar</string>
+    <string name="app_circle_bar_title"><i><b>App circle bar</b></i></string>
     <string name="app_circle_bar_summary">Show circle app launcher after touching right side of screen</string>
     <string name="app_circle_bar_included_apps_title">Included apps</string>
     <string name="app_circle_bar_included_apps_summary">Apps will show in app circle bar</string>
@@ -287,5 +286,12 @@
 
     <!-- Summary for "Configure lockscreen" when security gesture is enabled [CHAR LIMIT=45] -->
     <string name="unlock_set_unlock_mode_gesture">Gesture</string>
+    
+    <!--ChangeLog-->
+    <string name="changelog_title"><i><b>Changelog</b></i></string>
+    <string name="changelog_loading">Loading changelog...</string>
+    <string name="changelog_error">Unable to load changelog</string>
+    <string name="changelog_unknown">Unknown</string>
+    <string name="changelog_version">Version</string>
 
 </resources>
