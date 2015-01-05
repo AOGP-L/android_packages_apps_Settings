@@ -321,8 +321,4 @@ public class ShortcutPickHelper {
 
         return uri;
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 59ed9d5... Settings: Gesture Anywhere - bring it back [2/2]
