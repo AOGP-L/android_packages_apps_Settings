@@ -585,7 +585,6 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
                     context.getPackageManager().getApplicationEnabledSetting(TERMINAL_APP_PACKAGE)
                     == PackageManager.COMPONENT_ENABLED_STATE_ENABLED);
         }
-                Settings.Global.STAY_ON_WHILE_PLUGGED_IN, 0) != 0);
         updateSwitch(mBtHciSnoopLog, Settings.Secure.getInt(cr,
                 Settings.Secure.BLUETOOTH_HCI_LOG, 0) != 0);
         if (mEnableOemUnlock != null) {
