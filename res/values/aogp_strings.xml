@@ -29,6 +29,13 @@
     <string name="reset_message">Reset all entries to default?</string>
     <string name="add">Add</string>
     <string name="help">Help</string>
+    
+    <!-- Dialog-->
+    <string name="header_dialog"><i><b>Information</b></i></string>
+    <string name="dialog_message"><i><b>If you come across any bugs or issue with the ROM\n\nPlease provide us the reports such that we can help you\n\nThe following materials that you can used when reporting to us
+    \n\n-Logcat/Dmesg\n\n-Any Mods you have installed on your phone\n\n-Giving us detailed information about the bugs</b></i></string>
+    <string name="dialog_toast">Please take note!</string>
+    <string name="button_ok">Ok</string>
 
     <!-- About phone screen, build date -->
     <string name="build_date">Build date</string>

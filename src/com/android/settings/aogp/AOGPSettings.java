@@ -16,6 +16,12 @@
 
 package com.android.settings.aogp;
 
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.app.DialogFragment;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
@@ -35,4 +41,58 @@ public class AOGPSettings extends SettingsPreferenceFragment  {
 
         addPreferencesFromResource(R.xml.aogp_settings);
 	}
+	
+	 @Override
+     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+          menu.add(0, MENU_HELP, 0, R.string.header_dialog)
+                  .setIcon(R.drawable.ic_help)
+                  .setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
+     }
+     
+     @Override
+     public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case MENU_HELP:
+                Toast.makeText(getActivity(),
+                (R.string.dialog_toast),
+                Toast.LENGTH_LONG).show();
+                return true;
+            default:
+                return false;
+        }
+     }
+     
+     public static class MyAlertDialogFragment extends DialogFragment {
+
+        public static MyAlertDialogFragment newInstance(int id) {
+            MyAlertDialogFragment frag = new MyAlertDialogFragment();
+            Bundle args = new Bundle();
+            args.putInt("id", id);
+            frag.setArguments(args);
+            return frag;
+        }
+
+        public Dialog onCreateDialog(Bundle savedInstanceState) {
+            int id = getArguments().getInt("id");
+            switch (id) {
+                case MENU_HELP:
+                    return new AlertDialog.Builder(getActivity())
+                    .setTitle(R.string.header_dialog)
+                    .setMessage(R.string.dialog_message)
+                    .setCancelable(false)
+                    .setNegativeButton(R.string.button_ok,
+                        new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                        }
+                    })
+                    .create();
+            }
+            throw new IllegalArgumentException("unknown id " + id);
+        }
+
+        @Override
+        public void onCancel(DialogInterface dialog) {
+
+        }
+    }
 }
