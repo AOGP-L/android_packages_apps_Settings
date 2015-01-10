@@ -70,7 +70,7 @@
         android:key="system_options"
         android:title="@string/system_options">   
         
-    <CheckBoxPreference
+    <SwitchPreference
         android:key="disable_immersive_message"
         android:title="@string/disable_immersive_message_title"
         android:summary="@string/disable_immersive_message_summary"

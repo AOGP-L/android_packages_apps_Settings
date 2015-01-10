@@ -27,7 +27,7 @@ import android.content.res.Resources;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.os.Bundle;
-import android.preference.CheckBoxPreference;
+import android.preference.SwitchPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.Preference.OnPreferenceClickListener;
@@ -51,7 +51,7 @@ public class AOGPMisc extends SettingsPreferenceFragment {
     private static final String DISABLE_IMMERSIVE_MESSAGE = "disable_immersive_message";
     
     private final Configuration mCurConfig = new Configuration();
-    private CheckBoxPreference mDisableIM;
+    private SwitchPreference mDisableIM;
     
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -63,7 +63,7 @@ public class AOGPMisc extends SettingsPreferenceFragment {
         
     PreferenceScreen prefSet = getPreferenceScreen();    
     
-    mDisableIM = (CheckBoxPreference) findPreference(DISABLE_IMMERSIVE_MESSAGE);
+    mDisableIM = (SwitchPreference) findPreference(DISABLE_IMMERSIVE_MESSAGE);
     mDisableIM.setChecked((Settings.System.getInt(resolver,
             Settings.System.DISABLE_IMMERSIVE_MESSAGE, 0) == 1));
             
@@ -71,7 +71,7 @@ public class AOGPMisc extends SettingsPreferenceFragment {
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
         if  (preference == mDisableIM) {
-            boolean checked = ((CheckBoxPreference)preference).isChecked();
+            boolean checked = ((SwitchPreference)preference).isChecked();
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.DISABLE_IMMERSIVE_MESSAGE, checked ? 1:0);
             return true;
