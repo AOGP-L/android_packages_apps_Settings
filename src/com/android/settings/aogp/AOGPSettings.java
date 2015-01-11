@@ -22,12 +22,25 @@ import android.app.Dialog;
 import android.app.DialogFragment;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.PreferenceScreen;
+import android.content.SharedPreferences;
+import android.net.Uri;
+import android.text.Html;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
@@ -41,7 +54,7 @@ public class AOGPSettings extends SettingsPreferenceFragment  {
 
         addPreferencesFromResource(R.xml.aogp_settings);
 	}
-	
+			
 	 @Override
      public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
           menu.add(0, MENU_HELP, 0, R.string.header_dialog)
