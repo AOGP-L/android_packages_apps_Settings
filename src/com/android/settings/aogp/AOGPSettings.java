@@ -47,6 +47,8 @@ import com.android.settings.SettingsPreferenceFragment;
 
 
 public class AOGPSettings extends SettingsPreferenceFragment  {
+	
+	private static final int MENU_HELP = 0;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
