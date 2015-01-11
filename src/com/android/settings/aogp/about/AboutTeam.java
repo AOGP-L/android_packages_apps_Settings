@@ -46,7 +46,7 @@ public class AboutTeam extends PreferenceFragment implements OnPreferenceClickLi
 		mrutvik = (Preference) findPreference(KEY_RUTVIK);
 		mnitin = (Preference) findPreference(KEY_NITIN);
 
-        mk2wl.setIcon(R.drawable.k2wl)
+                mk2wl.setIcon(R.drawable.k2wl);
 		mtrach.setIcon(R.drawable.trach);
 		mjack.setIcon(R.drawable.jack);
 		mashishs.setIcon(R.drawable.ashishshekar);
