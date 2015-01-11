@@ -29,6 +29,7 @@
     <string name="reset_message">Reset all entries to default?</string>
     <string name="add">Add</string>
     <string name="help">Help</string>
+    <string name="apply">Apply</string>
     
     <!-- Dialog-->
     <string name="header_dialog"><i><b>Information</b></i></string>

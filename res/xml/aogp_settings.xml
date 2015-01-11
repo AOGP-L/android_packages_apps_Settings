@@ -49,9 +49,16 @@
 	    android:icon="@drawable/ic_download" />     
          
     <!-- Change Log -->
-    <PreferenceScreen android:key="changelog"
+    <PreferenceScreen 
+         android:key="changelog"
          android:title="@string/changelog_title"
          android:icon="@drawable/ic_changelog"
-         android:fragment="com.android.settings.aogp.ChangeLog" />  
+         android:fragment="com.android.settings.aogp.ChangeLog" />
+         
+    <!-- About Team -->
+    <PreferenceScreen
+         android:key="team"
+         android:title="About AOGPTeam"
+         android:fragment="com.android.settings.aogp.about.AboutTeam" />  
 
 </PreferenceScreen>

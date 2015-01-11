@@ -1,0 +1,11 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+        <PreferenceCategory android:title="Developers">
+            <Preference android:key="key_k2wl" android:title="Kartik" android:summary="Lead Developer"/>
+            <Preference android:key="key_trach" android:title="Jeremy" android:summary="Lead Developer/Themer"/>
+            <Preference android:key="key_jack" android:title="JackEagle" android:summary="Source/Device Maintainer"/>
+            <Preference android:key="key_ashishs" android:title="Ashish Shekar" android:summary="App/Web Developer"/>
+            <Preference android:key="key_ashishb" android:title="Ashish Bansal" android:summary="Lead Developer"/>
+            <Preference android:key="key_rutvik" android:title="Rutvik Rajagopal" android:summary="Web Developer"/>
+            <Preference android:key="key_nitin" android:title="Nitin Chopra" android:summary="Financial Support/Social Media Maintainer"/>
+        </PreferenceCategory>
+    </PreferenceScreen>

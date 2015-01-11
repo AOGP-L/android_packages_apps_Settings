@@ -78,5 +78,10 @@
     <!-- DSLV colors -->
     <color name="dslv_icon_dark">#ff009688</color>
     <color name="dslv_float_cackground_color">#ffe1e1e0</color>
+    
+    <!--Bottom Button-->
+    <color name="mca__list_item_bg_normal">@android:color/transparent</color>
+    <color name="mca__list_item_bg_pressed">@color/holo_white_normal</color>
+    <color name="holo_white_normal">#33ffffff</color>
 
 </resources>
